@@ -1,4 +1,6 @@
 import './App.css';
+import SignUp from './Components/SignUp';
+import Home from './Pages/Home/Home';
 import './styles/ButtonStyles.css';
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <button className='button primaryNoBackgroundButton'>Click Here</button>
       <button className='button secondaryNoBackgroundButton'>Click Here</button>
       <button className='button terrestrialButton'>Click Here</button>
+      <Home></Home>
+      <SignUp></SignUp>
     </div>
   );
 }
