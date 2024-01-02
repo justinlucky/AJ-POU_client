@@ -1,0 +1,116 @@
+.button {
+    border: none;
+    background-color: none !important;
+    cursor: pointer;
+    padding: 7px 15px !important;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+    padding: 7px 15px !important;
+}
+
+.primaryCurveButton{
+    border-radius: 15px !important;
+    background-color: var(--button-primary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.primaryCurveButton:hover{
+    background-color: var(--button-primary-color-hover);
+}
+
+.secondaryCurveButton{
+    border-radius: 15px !important;
+    background-color: var(--button-secondary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.secondaryCurveButton:hover{
+    background-color: var(--button-secondary-color-hover);
+}
+
+.primaryNoCurveButton{
+    background-color: var(--button-primary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.primaryNoCurveButton:hover{
+    background-color: var(--button-primary-color-hover);
+}
+
+.secondaryNoCurveButton{
+    background-color: var(--button-secondary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.secondaryNoCurveButton:hover{
+    background-color: var(--button-secondary-color-hover);
+}
+
+.primarySmallCurveButton{
+    border-radius: 7px !important;
+    background-color: var(--button-primary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.primarySmallCurveButton:hover{
+    background-color: var(--button-primary-color-hover);
+}
+
+.secondarySmallCurveButton{
+    border-radius: 7px !important;
+    background-color: var(--button-secondary-color);
+    color: var(--button-text-color);
+    transition: all .5s ease-in-out;
+}
+
+.secondarySmallCurveButton:hover{
+    background-color: var(--button-secondary-color-hover);
+}
+
+.primaryNoBackgroundButton{
+    border-radius: 15px !important;
+    background-color: inherit ;
+    color: var(--button-primary-color);
+    transition: all .5s ease-in-out;
+    border: 1px solid var(--button-primary-color);
+}
+
+.primaryNoBackgroundButton:hover{
+    background-color: var(--button-primary-color-hover);
+    color: var(--button-text-color);
+}
+
+.secondaryNoBackgroundButton{
+    border-radius: 15px !important;
+    background-color: inherit;
+    color: var(--button-secondary-color);
+    transition: all .5s ease-in-out;
+    border: 1px solid var(--button-secondary-color);
+}
+
+.secondaryNoBackgroundButton:hover{
+    background-color: var(--button-secondary-color-hover);
+    color: var(--button-text-color);
+}
+
+.terrestrialButton{
+    color: var(--button-terrestrial-color);
+    outline: none;
+    border: none;
+    background-color: inherit !important;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        color: var(--button-terrestrial-color-hover);
+        border-bottom: 1px solid var(--button-terrestrial-color-hover);
+    }
+}
+

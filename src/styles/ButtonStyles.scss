@@ -1,0 +1,129 @@
+@import '../index.scss';
+
+.button {
+    border: none;
+    background-color: none !important;
+    cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primaryCurveButton{
+    border-radius: 15px !important;
+    padding: 7px 15px !important;
+    background-color:$button-primary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-primary-color-hover;
+    }
+}
+
+.secondaryCurveButton{
+    border-radius: 15px !important;
+    padding: 7px 15px !important;
+    background-color:$button-secondary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-secondary-color-hover;
+    }
+}
+
+.primaryNoCurveButton{
+    padding: 7px 15px !important;
+    background-color:$button-primary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-primary-color-hover;
+    }
+}
+
+.secondaryNoCurveButton{
+    padding: 7px 15px !important;
+    background-color:$button-secondary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-secondary-color-hover;
+    }
+}
+
+.primarySmallCurveButton{
+    border-radius: 7px !important;
+    padding: 7px 15px !important;
+    background-color:$button-primary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-primary-color-hover;
+    }
+}
+
+.secondarySmallCurveButton{
+    border-radius: 7px !important;
+    padding: 7px 15px !important;
+    background-color:$button-secondary-color;
+    color: $button-text-color;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-secondary-color-hover;
+    }
+}
+
+.primaryNoBackgroundButton{
+    border-radius: 7px !important;
+    padding: 7px 15px !important;
+    border: 1px solid $button-primary-color;
+    outline: none;
+    color: $button-primary-color;
+    background-color: $white;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-primary-color-hover;
+        color: $button-text-color;
+    }
+}
+
+.secondaryNoBackgroundButton{
+    border-radius: 7px !important;
+    padding: 7px 15px !important;
+    border: 1px solid $button-secondary-color;
+    color: $button-secondary-color;
+    background-color: $white;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: $button-secondary-color-hover;
+        color: $button-text-color;
+    }
+}
+
+.terrestrialButton{
+    color: $button-terrestrial-color;
+    padding: 7px 15px !important;
+    outline: none;
+    border: none;
+    background-color: inherit !important;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        color: $button-terrestrial-color-hover;
+        border-bottom: 1px solid $button-terrestrial-color-hover;
+    }
+}
+
+
+
+

@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles/ButtonStyles.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button className='button primaryCurveButton'>Click Here</button>
+      <button className='button secondaryCurveButton'>Click Here</button>
+      <button className='button primaryNoCurveButton'>Click Here</button>
+      <button className='button secondaryNoCurveButton'>Click Here</button>
+      <button className='button primarySmallCurveButton'>Click Here</button>
+      <button className='button secondarySmallCurveButton'>Click Here</button>
+      <button className='button primaryNoBackgroundButton'>Click Here</button>
+      <button className='button secondaryNoBackgroundButton'>Click Here</button>
+      <button className='button terrestrialButton'>Click Here</button>
     </div>
   );
 }
