@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import Register from '../Services/RegistrationService';
+
+const initialFormData = {
+    username: '',
+    email: '',
+    mobile: '',
+    password: '',
+}
 
 const SignUp = () => {
-    const [formData, setFormData] = useState({
-        username: '',
-        email: '',
-        mobile: '',
-        password: '',
-    });
+    const [formData, setFormData] = useState(initialFormData);
 
     const handleChange = (e) => {
         setFormData({
@@ -18,65 +21,66 @@ const SignUp = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:7000/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            const userData = await Register.handleSignUp(
+                formData.username,
+                formData.email,
+                formData.mobile,
+                formData.password
+            );
 
-            if (response.ok) {
-                const userData = await response.json();
-                console.log('User signed up:', userData);
-            } else {
-                console.error('Sign-up failed');
-            }
+            setFormData(initialFormData);
+            console.log('User signed up', userData);
         } catch (error) {
-            console.error('Error during sign-up:', error);
+            console.error('Error during registration', error);
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Username:
-                <input
-                    type="text"
-                    name="username"
-                    value={formData.username}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Email:
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Phone Number:
-                <input
-                    type="number"
-                    name="mobile"
-                    value={formData.mobile}
-                    onChange={handleChange}
-                />
-            </label>
-            <label>
-                Password:
-                <input
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                />
-            </label>
-            <button type="submit">Sign Up</button>
-        </form>
+        <div className="form-container">
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Username:
+                    <input
+                        type="text"
+                        name="username"
+                        value={formData.username}
+                        onChange={handleChange}
+                        autoComplete='on'
+                    />
+                </label>
+                <label>
+                    Email:
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        autoComplete='on'
+                    />
+                </label>
+                <label>
+                    Phone Number:
+                    <input
+                        type="number"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        autoComplete='on'
+                    />
+                </label>
+                <label>
+                    Password:
+                    <input
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        autoComplete='on'
+                    />
+                </label>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     );
 };
 

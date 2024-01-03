@@ -20,4 +20,18 @@ code {
   --button-text-color: #f7f7f7;
   --button-terrestrial-color: #c51691;
   --button-terrestrial-color-hover: #530f53;
+  --dark-mode-background-color: #021827;
+  --dark-mode-color: #eee;
+  --light-mode-background-color: #60afe4;
+  --light-mode-color: #031620;
+}
+
+.dark-mode {
+  background-color: var(--dark-mode-background-color);
+  color: var(--dark-mode-color);
+}
+
+.light-mode {
+  background-color: var(--light-mode-background-color);
+  color: var(--light-mode-color);
 }
